@@ -1,6 +1,6 @@
 const popularArtists = [
   "Drake", "Travis Scott", "Michael Jackson", "Taylor Swift",
-  "Lana Del Rey", "Justin Bieber", "The Weeknd", "NBA Youngboy", "Playboi Carti", "Kanye West",
+  "Lana Del Rey", "Justin Bieber", "The Weeknd", "NBA Youngboy", "Playboi Carti", "Kanye West", "Yeat",
   // Add more artists here...
 ];
 

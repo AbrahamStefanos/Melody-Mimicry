@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background: url("musicnotes/newnote.png") transparent;
+}
+
+.step {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc; 
+  color: white;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.stepstyle{
+  font-size: 50px;
+  
+}
+
+.hiddenSection {
+  display: none;
+  height: 100vh;
+}
+
+.notes1{
+  position: absolute;
+  width: 800px;
+  pointer-events: none;
+  
+}
+.notes2{
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  pointer-events: none;
+  opacity: 10%;
+  
+}
+
+
+
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 60px 90px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 60px;
+  border-radius: 30px;
+}
+
+button:hover {
+  background-color: #3d444b;
+}
+
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 400px; 
+  border-radius: 10px;
+}
+
+header {
+  background: linear-gradient(to bottom, #000000, 60%, rgb(49, 2, 86)); 
+  color: rgb(206, 194, 215);
+  padding: 20px;
+  text-align: center;
+}
+
+.title{
+  font-size: 50px;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(43, 2, 75), rgb(147, 54, 241));
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top: 4px solid #007bff; 
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.hidden{
+  display: none;
+
+}
+
+.yeat{
+  width: 400px;
+
+}

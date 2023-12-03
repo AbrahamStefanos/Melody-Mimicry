@@ -47,8 +47,8 @@ function KMPSearch(text, pattern) {
 
 // Usage:
 const popularArtists = [
-  "Drake", "Billie Eilish", "Ed Sheeran", "Ariana Grande", "Taylor Swift",
-  "BTS", "Justin Bieber", "The Weeknd", "Dua Lipa", "Post Malone", "Playboi Carti", "Kanye West", 
+  "Drake", "Travis Scott", "Michael Jackson", "Taylor Swift",
+  "Lana Del Rey", "Justin Bieber", "The Weeknd", "NBA Youngboy", "Playboi Carti", "Kanye West", "Yeat",
   // Add more artists here...
 ];
 

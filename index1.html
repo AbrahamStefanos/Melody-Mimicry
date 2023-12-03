@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Artist Search with Suggestions</title>
+  <meta charset="UTF-8">
+  <title>Melody Mimicry</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <input type="text" id="searchInput" placeholder="Search for artists...">
-  <div id="suggestions"></div>
+  
+  <header>
+    <h1 class ="title">Melody Mimicry</h1>
+  </header>
 
-  <script src="kmp.js"></script> <!-- Link to your JavaScript file -->
+  <section class="step step1">
+    <h2 class="stepstyle">Step 1: Choose AI Voice</h2>
+    <input type="text" id="searchInput" placeholder="Search for artists...">
+    <div id="suggestions"></div>
+  </section>
+
+  <section class="step step2">
+    <h2 class="stepstyle">Step 2: Pick a Song</h2>
+    <img src = "musicnotes/note2.png" class="notes2">
+
+    <input type="text" id="songSearch" placeholder="Search for Song...">
+  </section>
+
+  <section class="step step3">
+    <button id="finalizeButton">Finalize</button>
+    <img src = "musicnotes/newnote.png" class="notes1">
+       <div class="spinner hidden"></div>
+  </section>
+
+  <section class="step hiddenSection">
+    <h2>AI Song Complete!!</h2>
+    <p>bigger then everything</p>
+    <img src="musicnotes/yeatCover.webp" class="yeat">
+  </section>
+
+  <audio id="audioPlayer" src="mp3_files/yeat_test.mp3" preload="auto"></audio>
+
+  
+  <script src="kmp.js"></script>
+  <script src="script.js"></script>
+
+  
+
 </body>
 </html>
