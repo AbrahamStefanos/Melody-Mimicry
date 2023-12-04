@@ -1,12 +1,11 @@
 const popularArtists = [
-  "Drake", "Travis Scott", "Michael Jackson", "Taylor Swift",
+  "Drake", "Travis Scott", "Michael Jackson", "Taylor Swift", "Lil Uzi Vert", "Spongebob",
   "Lana Del Rey", "Justin Bieber", "The Weeknd", "NBA Youngboy", "Playboi Carti", "Kanye West", "Yeat",
   // Add more artists here...
 ];
 
 const songs = [
-  "Hotline Bling","God's Plan","One Dance", "In My Feelings", "Started From the Bottom", 
-  "Passionfruit", "Hold On, We're Going Home", "Too Good", "Nice for What", "Nonstop"
+  "Pop", "Batman", "Nobu", "They Go Off",
 ];
 
 function stringHash(text) {
