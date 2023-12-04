@@ -52,18 +52,31 @@ const popularArtists = [
   // Add more artists here...
 ];
 
+const songs = [
+  "Hotline Bling","God's Plan","One Dance", "In My Feelings", "Started From the Bottom", 
+  "Passionfruit", "Hold On, We're Going Home", "Too Good", "Nice for What", "Nonstop"
+];
+
 function getMatchingArtists(input) {
   const matchingArtists = popularArtists.filter(artist => KMPSearch(artist.toLowerCase(), input.toLowerCase()));
   return matchingArtists.slice(0, 5); // Limit suggestions to 5
 }
 
+function getMatchingSongs(input) {
+  const matchingSongs = songs.filter(song => KMPSearch(song.toLowerCase(), input.toLowerCase()));
+  return matchingSongs.slice(0, 5); // Limit suggestions to 5
+}
+
+
+
 // Rest of the code for the search bar handling remains the same as in the previous example
 
 
 // Example usage:
-const searchInput = document.getElementById("searchInput");
-const suggestions = document.getElementById("suggestions");
+const searchInput = document.getElementById("artistsearch");
+const suggestions = document.getElementById("suggestions1");
 
+let chosenartist = "";
 searchInput.addEventListener("input", function() {
   const inputValue = this.value;
   suggestions.innerHTML = ""; // Clear previous suggestions
@@ -80,6 +93,7 @@ searchInput.addEventListener("input", function() {
       suggestionItem.classList.add("suggestion");
       suggestionItem.addEventListener("click", function() {
         searchInput.value = artist;
+        chosenartist = artist;
         suggestions.innerHTML = ""; // Clear suggestions on click
       });
       suggestions.appendChild(suggestionItem);
@@ -90,3 +104,36 @@ searchInput.addEventListener("input", function() {
     suggestions.appendChild(noMatch);
   }
 });
+
+const searchInput2 = document.getElementById("songsearch");
+const suggestions2 = document.getElementById("suggestions2");
+
+let chosensong = "";
+
+searchInput2.addEventListener("input", function() {
+  const inputValue = this.value;
+  suggestions2.innerHTML = ""; // Clear previous suggestions
+
+  if (inputValue.length === 0) {
+    return;
+  }
+  const matchingSongs = getMatchingSongs(inputValue);
+  if (matchingSongs.length > 0) {
+    for (const song of matchingSongs) {
+      const suggestionItem2 = document.createElement("div");
+      suggestionItem2.textContent = song;
+      suggestionItem2.classList.add("suggestion");
+      suggestionItem2.addEventListener("click", function() {
+        searchInput2.value = song;
+        chosensong = song;
+        suggestions2.innerHTML = ""; // Clear suggestions on click
+      });
+      suggestions2.appendChild(suggestionItem2);
+    }
+  } else {
+    const noMatch2 = document.createElement("div");
+    noMatch2.textContent = "No matching songs found";
+    suggestions2.appendChild(noMatch2);
+  }
+});
+
